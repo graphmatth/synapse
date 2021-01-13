@@ -12,6 +12,7 @@ module.exports = {
 	/* Your site config here */
 	plugins: [
 		'gatsby-plugin-eslint',
+		'gatsby-plugin-styled-components',
 		{
 			resolve: `gatsby-source-prismic`,
 			options: {
@@ -20,6 +21,18 @@ module.exports = {
 				linkResolver: ({ node, key, value }) => (post) => `/${post.uid}`,
 				schemas: {
 					homepage: require('./src/schemas/homepage.json'),
+				},
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				google: {
+					families: ['Inter'],
+				},
+				custom: {
+					families: ['aeonikregular', 'aeonikbold'],
+					urls: ['fonts/fonts.css'],
 				},
 			},
 		},

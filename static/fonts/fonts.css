@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'aeonikregular';
+	src: url('./aeonik-regular-webfont.woff2') format('woff2'), url('./aeonik-regular-webfont.woff') format('woff');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'aeonikbold';
+	src: url('./aeonik-bold-webfont.woff2') format('woff2'), url('./aeonik-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
