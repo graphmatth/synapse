@@ -1,0 +1,32 @@
+import React, { useState } from 'react';
+import { HeaderContainer, Hamburger, HamburgerBar, Navigation, NavItem } from './styles';
+
+const Header = ({ dataNavigation }) => {
+	const [isOpen, setIsOpen] = useState(false);
+	const renderedMenuLinks = dataNavigation.menu_links
+		? dataNavigation.menu_links.map((menuLink, index) => (
+				<NavItem key={`top-nav-${index}`}>
+					<a href={menuLink.link.url}>{menuLink.label.text}</a>
+				</NavItem>
+		  ))
+		: null;
+	return (
+		<HeaderContainer>
+			<img alt="logo" src={dataNavigation.logo.url} />
+			<Hamburger
+				isOpen={isOpen}
+				role="button"
+				tabIndex={0}
+				onClick={() => (isOpen === true ? setIsOpen(false) : setIsOpen(true))}
+			>
+				<HamburgerBar />
+				<HamburgerBar />
+			</Hamburger>
+			<Navigation isOpen={isOpen}>
+				<ul>{renderedMenuLinks}</ul>
+			</Navigation>
+		</HeaderContainer>
+	);
+};
+
+export default Header;

@@ -1,19 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import Header from '../components/Header';
 
-const Title = styled.h1`
-	color: ${(props) => props.theme.colors.primary};
-	/* font-family: ''; */
-	font-family: 'aeonikregular';
-`;
-
-export default function Home({ data: { prismicHomepage } }) {
+export default function Home({ data: { prismicHomepage, prismicNavigation } }) {
 	const prismicContent = prismicHomepage.data;
 	if (!prismicContent) return null;
 
-	return <Title>{prismicContent.title.text}</Title>;
+	const prismicNavigationContent = prismicNavigation.data;
+	if (!prismicNavigationContent) return null;
+
+	return <Header dataNavigation={prismicNavigationContent} />;
 }
 
 export const homeQuery = graphql`
@@ -25,17 +21,21 @@ export const homeQuery = graphql`
 				}
 			}
 		}
+
+		prismicNavigation {
+			data {
+				logo {
+					url
+				}
+				menu_links {
+					label {
+						text
+					}
+					link {
+						url
+					}
+				}
+			}
+		}
 	}
 `;
-
-Home.propTypes = {
-	data: PropTypes.shape({
-		prismicHomepage: PropTypes.shape({
-			data: PropTypes.shape({
-				title: PropTypes.shape({
-					text: PropTypes.string.isRequired,
-				}),
-			}),
-		}),
-	}).isRequired,
-};

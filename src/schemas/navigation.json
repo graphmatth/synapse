@@ -1,0 +1,35 @@
+{
+	"Main": {
+		"logo": {
+			"type": "Image",
+			"config": {
+				"constraint": {},
+				"thumbnails": [],
+				"label": "Logo"
+			}
+		},
+		"menu_links": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"label": {
+						"type": "StructuredText",
+						"config": {
+							"single": "paragraph",
+							"label": "label",
+							"placeholder": "Name"
+						}
+					},
+					"link": {
+						"type": "Link",
+						"config": {
+							"label": "link",
+							"placeholder": "Select a Link..."
+						}
+					}
+				},
+				"label": "menu_links"
+			}
+		}
+	}
+}

@@ -21,6 +21,7 @@ module.exports = {
 				linkResolver: ({ node, key, value }) => (post) => `/${post.uid}`,
 				schemas: {
 					homepage: require('./src/schemas/homepage.json'),
+					navigation: require('./src/schemas/navigation.json'),
 				},
 			},
 		},
