@@ -32,6 +32,10 @@ export const Hamburger = styled.a`
 			transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
 		}
 	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: none;
+	}
 `;
 
 export const Navigation = styled.nav`
@@ -44,11 +48,30 @@ export const Navigation = styled.nav`
 	transition: transform 0.3s ease-in-out;
 	background-color: ${({ theme }) => theme.colors.ternary};
 	transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		transform: inherit;
+		position: relative;
+		display: flex;
+		height: auto;
+		top: inherit;
+	}
+`;
+
+export const NavItemContainer = styled.ul`
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
 `;
 
 export const NavItem = styled.li`
 	font-family: 'aeonikregular';
 	margin-bottom: 10px;
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		padding-left: 30px;
+	}
 `;
 
 export const HamburgerBar = styled.div`

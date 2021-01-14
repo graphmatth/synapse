@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HeaderContainer, Hamburger, HamburgerBar, Navigation, NavItem } from './styles';
+import { HeaderContainer, Hamburger, HamburgerBar, Navigation, NavItem, NavItemContainer } from './styles';
 
 const Header = ({ dataNavigation }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Header = ({ dataNavigation }) => {
 				<HamburgerBar />
 			</Hamburger>
 			<Navigation isOpen={isOpen}>
-				<ul>{renderedMenuLinks}</ul>
+				<NavItemContainer>{renderedMenuLinks}</NavItemContainer>
 			</Navigation>
 		</HeaderContainer>
 	);
