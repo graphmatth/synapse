@@ -1,6 +1,6 @@
 const Theme = {
 	colors: {
-		deepBlue: '#003753',
+		primary: '#003753',
 		secondary: '#6DD5C2',
 		ternary: '#EBFAFF',
 		grey: '#C4D0D4',

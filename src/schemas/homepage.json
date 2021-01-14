@@ -7,6 +7,37 @@
 				"label": "Title",
 				"placeholder": "Title"
 			}
+		},
+		"description": {
+			"type": "StructuredText",
+			"config": {
+				"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+				"label": "Description",
+				"placeholder": "Description"
+			}
+		},
+		"cta": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"label": {
+						"type": "StructuredText",
+						"config": {
+							"single": "paragraph",
+							"label": "label",
+							"placeholder": "Name"
+						}
+					},
+					"link": {
+						"type": "Link",
+						"config": {
+							"label": "link",
+							"placeholder": "Select a Link..."
+						}
+					}
+				},
+				"label": "cta"
+			}
 		}
 	}
 }
