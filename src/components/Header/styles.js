@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
 	display: flex;
 	justify-content: space-between;
 	background-color: ${({ theme }) => theme.colors.ternary};
-	padding: 20px;
+	padding: 20px 0;
 `;
 
 export const Hamburger = styled.a`
@@ -76,4 +76,16 @@ export const NavItem = styled.li`
 
 export const HamburgerBar = styled.div`
 	transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+`;
+
+export const HeaderWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 20px;
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
 `;

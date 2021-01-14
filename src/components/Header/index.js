@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { HeaderContainer, Hamburger, HamburgerBar, Navigation, NavItem, NavItemContainer } from './styles';
+import {
+	HeaderContainer,
+	Hamburger,
+	HamburgerBar,
+	Navigation,
+	NavItem,
+	NavItemContainer,
+	HeaderWrapper,
+} from './styles';
 
 const Header = ({ dataNavigation }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,19 +20,21 @@ const Header = ({ dataNavigation }) => {
 		: null;
 	return (
 		<HeaderContainer>
-			<img alt="logo" src={dataNavigation.logo.url} />
-			<Hamburger
-				isOpen={isOpen}
-				role="button"
-				tabIndex={0}
-				onClick={() => (isOpen === true ? setIsOpen(false) : setIsOpen(true))}
-			>
-				<HamburgerBar />
-				<HamburgerBar />
-			</Hamburger>
-			<Navigation isOpen={isOpen}>
-				<NavItemContainer>{renderedMenuLinks}</NavItemContainer>
-			</Navigation>
+			<HeaderWrapper>
+				<img alt="logo" src={dataNavigation.logo.url} />
+				<Hamburger
+					isOpen={isOpen}
+					role="button"
+					tabIndex={0}
+					onClick={() => (isOpen === true ? setIsOpen(false) : setIsOpen(true))}
+				>
+					<HamburgerBar />
+					<HamburgerBar />
+				</Hamburger>
+				<Navigation isOpen={isOpen}>
+					<NavItemContainer>{renderedMenuLinks}</NavItemContainer>
+				</Navigation>
+			</HeaderWrapper>
 		</HeaderContainer>
 	);
 };
