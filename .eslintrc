@@ -35,6 +35,7 @@
 				"props": false
 			}
 		],
+		"react/prop-types": "off",
 		"no-console": 1,
 		"no-underscore-dangle": "off",
 		"no-use-before-define": "off",
