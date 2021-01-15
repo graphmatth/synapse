@@ -52,6 +52,20 @@ export const homeQuery = graphql`
 					... on PrismicHomepageBodyInfosProduct {
 						id
 						slice_type
+						items {
+							cta1 {
+								text
+							}
+							product_description {
+								text
+							}
+							product_image {
+								url
+							}
+							product_title {
+								text
+							}
+						}
 					}
 				}
 			}
