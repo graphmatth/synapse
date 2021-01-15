@@ -2,17 +2,22 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
 	padding: 20px;
+
 	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		display: flex;
 		align-content: center;
 		justify-content: center;
+		max-width: 1250px;
+		margin: 0 auto;
 	}
 `;
 
 export const FeatureImg = styled.img`
 	width: fit-content;
 	max-width: 100%;
-	margin: 20px auto;
+	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin-left: 45px;
+	}
 `;
 
 export const Title = styled.h2`

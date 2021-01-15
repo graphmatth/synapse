@@ -86,7 +86,7 @@ export const HeaderWrapper = styled.div`
 	width: 100%;
 	padding: 0 20px;
 	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		max-width: 1440px;
+		max-width: 1250px;
 		margin: 0 auto;
 	}
 `;

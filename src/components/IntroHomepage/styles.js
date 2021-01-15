@@ -13,7 +13,6 @@ export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 80px 20px;
-	max-width: 1440px;
 	margin: 0 auto;
 	color: ${({ theme }) => theme.colors.primary};
 
@@ -21,6 +20,7 @@ export const Wrapper = styled.div`
 		padding: 100px 20px;
 		flex-direction: row;
 		align-items: center;
+		max-width: 1250px;
 	}
 `;
 
