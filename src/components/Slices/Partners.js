@@ -14,9 +14,13 @@ const FlexContainer = styled.div`
 	flex: 1;
 	margin: 15px;
 `;
+
+const MarqueeContainer = styled.div`
+	width: 100vw;
+`;
 const Partners = ({ slice }) => {
 	const isDesktop = useMediaQuery({
-		query: `(min-width: 768px)`,
+		minWidth: 768,
 	});
 	const sliceImg = slice.items.map((partner, index) => (
 		<Logo key={`partner=${index}`} alt="logo" src={partner.logo_partner.url} />
@@ -27,9 +31,11 @@ const Partners = ({ slice }) => {
 			{isDesktop ? (
 				<FlexContainer>{sliceImg}</FlexContainer>
 			) : (
-				<Marquee gradient={false} style={{ margin: 0 }}>
-					{sliceImg}
-				</Marquee>
+				<MarqueeContainer>
+					<Marquee gradient={false} style={{ margin: 0 }}>
+						{sliceImg}
+					</Marquee>
+				</MarqueeContainer>
 			)}
 		</>
 	);
