@@ -28,7 +28,7 @@ export const Title = styled.h2`
 	color: ${({ theme }) => theme.colors.primary};
 	margin-bottom: 10px;
 	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		font-size: 40px;
+		font-size: 37px;
 	}
 `;
 
@@ -39,7 +39,7 @@ export const Description = styled.p`
 	margin-bottom: 15px;
 	color: ${({ theme }) => theme.colors.primary};
 	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		font-size: 24px;
+		font-size: 20px;
 	}
 `;
 
