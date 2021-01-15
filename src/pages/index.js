@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
 import IntroHomepage from '../components/IntroHomepage';
+import SliceZone from '../components/SliceZone';
 
 export default function Home({ data: { prismicHomepage, prismicNavigation } }) {
 	const prismicContent = prismicHomepage.data;
@@ -14,6 +15,7 @@ export default function Home({ data: { prismicHomepage, prismicNavigation } }) {
 		<>
 			<Header dataNavigation={prismicNavigationContent} />
 			<IntroHomepage dataHomepage={prismicContent} />
+			<SliceZone sliceZone={prismicContent.body} />
 		</>
 	);
 }
@@ -36,21 +38,37 @@ export const homeQuery = graphql`
 						url
 					}
 				}
+
+				body {
+					... on PrismicHomepageBodyPartners {
+						id
+						slice_type
+						items {
+							logo_partner {
+								url
+							}
+						}
+					}
+					... on PrismicHomepageBodyInfosProduct {
+						id
+						slice_type
+					}
+				}
 			}
 		}
 
 		prismicNavigation {
 			data {
-				logo {
-					url
-				}
 				menu_links {
-					label {
-						text
-					}
 					link {
 						url
 					}
+					label {
+						text
+					}
+				}
+				logo {
+					url
 				}
 			}
 		}

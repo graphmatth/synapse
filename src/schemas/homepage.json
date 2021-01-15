@@ -38,6 +38,156 @@
 				},
 				"label": "cta"
 			}
+		},
+		"body": {
+			"type": "Slices",
+			"fieldset": "Slice zone",
+			"config": {
+				"labels": {
+					"partners": [],
+					"infos_product": [],
+					"testimonials": [],
+					"contact_form": []
+				},
+				"choices": {
+					"partners": {
+						"type": "Slice",
+						"fieldset": "Partners",
+						"description": "Partners",
+						"icon": "image",
+						"display": "grid",
+						"non-repeat": {},
+						"repeat": {
+							"logo_partner": {
+								"type": "Image",
+								"config": {
+									"constraint": {},
+									"thumbnails": [],
+									"label": "Logo partner"
+								}
+							}
+						}
+					},
+					"infos_product": {
+						"type": "Slice",
+						"fieldset": "Infos product",
+						"description": "Infos product",
+						"icon": "chrome_reader_mode",
+						"display": "list",
+						"non-repeat": {},
+						"repeat": {
+							"product_image": {
+								"type": "Image",
+								"config": {
+									"constraint": {},
+									"thumbnails": [],
+									"label": "Product Image"
+								}
+							},
+							"product_title": {
+								"type": "StructuredText",
+								"config": {
+									"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+									"label": "Product Title",
+									"placeholder": "Product Title"
+								}
+							},
+							"product_description": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Product description",
+									"placeholder": "Product description"
+								}
+							},
+							"cta1": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "cta",
+									"placeholder": "Cta content"
+								}
+							}
+						}
+					},
+					"testimonials": {
+						"type": "Slice",
+						"fieldset": "Testimonials",
+						"description": "Testimonials",
+						"icon": "speaker_notes",
+						"display": "list",
+						"non-repeat": {
+							"title_testimonial": {
+								"type": "StructuredText",
+								"config": {
+									"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+									"label": "Title Testimonial",
+									"placeholder": "Title Testimonial"
+								}
+							},
+							"description_testimonial": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Description Testimonial",
+									"placeholder": "Description Testimonial"
+								}
+							}
+						},
+						"repeat": {
+							"testimonial_logo": {
+								"type": "Image",
+								"config": {
+									"constraint": {},
+									"thumbnails": [],
+									"label": "Testimonial Logo"
+								}
+							},
+							"testimonial_content": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Testimonial Content",
+									"placeholder": "Testimonial Content"
+								}
+							},
+							"testimonial_author": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Testimonial author",
+									"placeholder": "Testimonial author"
+								}
+							}
+						}
+					},
+					"contact_form": {
+						"type": "Slice",
+						"fieldset": "Contact Form",
+						"description": "Contact Form",
+						"icon": "contact_mail",
+						"display": "list",
+						"non-repeat": {
+							"contact_form_title": {
+								"type": "StructuredText",
+								"config": {
+									"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+									"label": "Contact form title",
+									"placeholder": "Contact form title"
+								}
+							},
+							"contact_form_description": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Contact Form description"
+								}
+							}
+						},
+						"repeat": {}
+					}
+				}
+			}
 		}
 	}
 }
