@@ -67,6 +67,31 @@ export const homeQuery = graphql`
 							}
 						}
 					}
+
+					... on PrismicHomepageBodyTestimonials {
+						id
+						slice_type
+						primary {
+							description_testimonial {
+								text
+							}
+							title_testimonial {
+								text
+							}
+						}
+						items {
+							testimonial_author {
+								text
+								html
+							}
+							testimonial_content {
+								text
+							}
+							testimonial_logo {
+								url
+							}
+						}
+					}
 				}
 			}
 		}
