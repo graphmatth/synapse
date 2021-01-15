@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
 	justify-content: space-between;
 	background-color: ${({ theme }) => theme.colors.ternary};
 	padding: 20px 0;
+	z-index: 20;
 `;
 
 export const Hamburger = styled.a`

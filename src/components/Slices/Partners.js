@@ -16,7 +16,6 @@ const FlexContainer = styled.div`
 `;
 const Partners = ({ slice }) => {
 	const isDesktop = useMediaQuery({
-		// query: `(min-width: ${({ theme }) => theme.breakpoints.md})`,
 		query: `(min-width: 768px)`,
 	});
 	const sliceImg = slice.items.map((partner, index) => (
