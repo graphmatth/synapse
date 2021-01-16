@@ -92,6 +92,19 @@ export const homeQuery = graphql`
 							}
 						}
 					}
+
+					... on PrismicHomepageBodyContactForm {
+						id
+						primary {
+							contact_form_title {
+								text
+							}
+							contact_form_description {
+								text
+							}
+						}
+						slice_type
+					}
 				}
 			}
 		}
