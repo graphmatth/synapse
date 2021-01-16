@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
 	max-width: 1250px;
 	padding: 20px;
 	margin: 0 auto;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
@@ -20,7 +20,7 @@ export const Quote = styled.span`
 `;
 
 export const QuoteContainer = styled.div`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 	}
 `;
@@ -30,13 +30,13 @@ export const AuthorContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		flex-direction: row;
 	}
 `;
 
 export const Section = styled.section`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 		align-content: center;
 		justify-content: center;
@@ -46,11 +46,13 @@ export const Section = styled.section`
 `;
 
 export const BoxShadow = styled.div`
+	width: 100%;
 	box-shadow: ${({ theme }) => theme.shadows.sm};
 	padding: 20px;
 	border-radius: 15px;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin-right: 45px;
+		width: 40%;
 	}
 `;
 
@@ -58,7 +60,7 @@ export const TestimonialImg = styled.img`
 	width: fit-content;
 	max-width: 150px;
 	margin: 20px auto;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0px;
 	}
 `;
@@ -70,7 +72,7 @@ export const Title = styled.h2`
 	font-family: 'inter';
 	color: ${({ theme }) => theme.colors.primary};
 	margin-bottom: 10px;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 37px;
 	}
 `;
@@ -87,7 +89,7 @@ export const Author = styled.div`
 		font-weight: 700;
 		font-family: 'aeonikbold';
 	}
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0 20px;
 	}
 `;
@@ -99,7 +101,7 @@ export const Description = styled.p`
 	margin-bottom: 15px;
 	font-family: 'aeonikregular';
 	color: ${({ theme }) => theme.colors.primary};
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 20px;
 	}
 `;
@@ -111,13 +113,13 @@ export const Content = styled.p`
 	font-weight: 400;
 	font-family: 'aeonikregular';
 	color: ${({ theme }) => theme.colors.primary};
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 18px;
 	}
 `;
 
 export const InfosSection = styled.div`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

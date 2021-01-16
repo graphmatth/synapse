@@ -1,4 +1,8 @@
 import React from 'react';
+// Import css files
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 import {
 	BoxShadow,
 	Title,
@@ -36,7 +40,11 @@ const Testimonials = ({ slice }) => {
 				<Title>{slice.primary.title_testimonial.text}</Title>
 				<Description>{slice.primary.description_testimonial.text}</Description>
 			</div>
-			<BoxShadow>{testimonialsItems}</BoxShadow>
+			<BoxShadow>
+				<Slider dots infinite slidesToScroll={1} slidesToShow={1} speed={500}>
+					{testimonialsItems}
+				</Slider>
+			</BoxShadow>
 		</Wrapper>
 	);
 };
