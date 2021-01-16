@@ -34,7 +34,7 @@ export const Hamburger = styled.a`
 		}
 	}
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: none;
 	}
 `;
@@ -50,7 +50,7 @@ export const Navigation = styled.nav`
 	background-color: ${({ theme }) => theme.colors.ternary};
 	transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		transform: inherit;
 		position: relative;
 		display: flex;
@@ -60,7 +60,7 @@ export const Navigation = styled.nav`
 `;
 
 export const NavItemContainer = styled.ul`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -70,7 +70,7 @@ export const NavItemContainer = styled.ul`
 export const NavItem = styled.li`
 	font-family: 'aeonikregular';
 	margin-bottom: 10px;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		padding-left: 30px;
 	}
 `;
@@ -85,7 +85,7 @@ export const HeaderWrapper = styled.div`
 	justify-content: space-between;
 	width: 100%;
 	padding: 0 20px;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		max-width: 1250px;
 		margin: 0 auto;
 	}

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
 	padding: 20px;
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 		align-content: center;
 		justify-content: center;
@@ -15,7 +15,7 @@ export const Section = styled.section`
 export const FeatureImg = styled.img`
 	width: fit-content;
 	max-width: 100%;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin-left: 45px;
 	}
 `;
@@ -27,7 +27,7 @@ export const Title = styled.h2`
 	font-family: 'inter';
 	color: ${({ theme }) => theme.colors.primary};
 	margin-bottom: 10px;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 37px;
 	}
 `;
@@ -38,13 +38,13 @@ export const Description = styled.p`
 	font-weight: 400;
 	margin-bottom: 15px;
 	color: ${({ theme }) => theme.colors.primary};
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 20px;
 	}
 `;
 
 export const InfosSection = styled.div`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

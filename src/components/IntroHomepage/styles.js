@@ -4,7 +4,7 @@ export const Title = styled.h1`
 	font-size: 48px;
 	line-height: 1.1;
 	font-family: 'aeonikbold';
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 68px;
 	}
 `;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 	margin: 0 auto;
 	color: ${({ theme }) => theme.colors.primary};
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		padding: 100px 20px;
 		flex-direction: row;
 		align-items: center;
@@ -31,7 +31,7 @@ export const Description = styled.div`
 	margin-bottom: 15px;
 	margin-top: 15px;
 	font-family: 'aeonikregular';
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		font-size: 29px;
 	}
 `;
@@ -48,14 +48,14 @@ export const Arrow = styled.img`
 `;
 
 export const TextSection = styled.div`
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		width: 50%;
 	}
 `;
 
 export const Video = styled.video`
 	display: none;
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: block;
 		width: 100%;
 		mask-image: url('../../Images/vector-synapse.svg');
