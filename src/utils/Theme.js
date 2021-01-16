@@ -4,6 +4,7 @@ const Theme = {
 		secondary: '#6DD5C2',
 		ternary: '#EBFAFF',
 		grey: '#C4D0D4',
+		lightGrey: '#E5E5E5',
 		black: '#000',
 		white: '#fff',
 	},
