@@ -8,7 +8,6 @@ const SocialFooter = ({ slice }) => {
 	const [statusForm, setStatusForm] = useState('');
 
 	const handleChange = (e) => {
-		console.log('e', e.target.value);
 		setState({ ...state, [e.target.name]: e.target.value });
 		setEmail(e.target.value);
 	};
@@ -16,12 +15,10 @@ const SocialFooter = ({ slice }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const form = e.target;
-		console.log(form);
 		addToMailchimp(email)
 			.then((data) => {
 				// I recommend setting data to React state
 				// but you can do whatever you want (including ignoring this `then()` altogether)
-				console.log(data);
 				setStatusForm(data.msg);
 				form.reset();
 				setEmail('');
