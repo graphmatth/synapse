@@ -1,0 +1,122 @@
+{
+	"Main": {
+		"footer_logo": {
+			"type": "Image",
+			"config": {
+				"constraint": {},
+				"thumbnails": [],
+				"label": "Footer logo"
+			}
+		},
+		"body": {
+			"type": "Slices",
+			"fieldset": "Slice zone",
+			"config": {
+				"labels": {
+					"section": [],
+					"legal_mention": [],
+					"social": []
+				},
+				"choices": {
+					"section": {
+						"type": "Slice",
+						"fieldset": "section",
+						"description": "section",
+						"icon": "face",
+						"display": "grid",
+						"non-repeat": {
+							"title_content": {
+								"type": "Text",
+								"config": {
+									"label": "title content",
+									"placeholder": "Title content"
+								}
+							}
+						},
+						"repeat": {
+							"text_content": {
+								"type": "Text",
+								"config": {
+									"label": "text content",
+									"placeholder": "text content test"
+								}
+							},
+							"link": {
+								"type": "Link",
+								"config": {
+									"label": "link",
+									"placeholder": "url"
+								}
+							}
+						}
+					},
+					"legal_mention": {
+						"type": "Slice",
+						"fieldset": "Legal Mentions",
+						"description": "Legal Mentions",
+						"icon": "account_balance",
+						"display": "grid",
+						"non-repeat": {},
+						"repeat": {
+							"link": {
+								"type": "Link",
+								"config": {
+									"label": "Link",
+									"placeholder": "Link"
+								}
+							},
+							"link_content": {
+								"type": "Text",
+								"config": {
+									"label": "link content",
+									"placeholder": "link content"
+								}
+							}
+						}
+					},
+					"social": {
+						"type": "Slice",
+						"fieldset": "Social",
+						"description": "Social",
+						"icon": "share",
+						"display": "grid",
+						"non-repeat": {
+							"title": {
+								"type": "StructuredText",
+								"config": {
+									"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+									"label": "Title",
+									"placeholder": "Title"
+								}
+							},
+							"description": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+									"label": "Description"
+								}
+							}
+						},
+						"repeat": {
+							"social_icon": {
+								"type": "Image",
+								"config": {
+									"constraint": {},
+									"thumbnails": [],
+									"label": "Social icon"
+								}
+							},
+							"social_link": {
+								"type": "Link",
+								"config": {
+									"label": "Social Link",
+									"placeholder": "Social Link"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

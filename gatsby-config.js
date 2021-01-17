@@ -22,6 +22,7 @@ module.exports = {
 				schemas: {
 					homepage: require('./src/schemas/homepage.json'),
 					navigation: require('./src/schemas/navigation.json'),
+					footer: require('./src/schemas/footer.json'),
 				},
 			},
 		},

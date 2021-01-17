@@ -1,21 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
 import IntroHomepage from '../components/IntroHomepage';
 import SliceZone from '../components/SliceZone';
 
-export default function Home({ data: { prismicHomepage, prismicNavigation } }) {
+export default function Home({ data: { prismicHomepage, prismicNavigation, prismicFooter } }) {
 	const prismicContent = prismicHomepage.data;
 	if (!prismicContent) return null;
 
 	const prismicNavigationContent = prismicNavigation.data;
 	if (!prismicNavigationContent) return null;
 
+	const prismicFooterContent = prismicFooter.data;
+	if (!prismicFooter) return null;
+
 	return (
 		<>
 			<Header dataNavigation={prismicNavigationContent} />
 			<IntroHomepage dataHomepage={prismicContent} />
 			<SliceZone sliceZone={prismicContent.body} />
+			<FooterContainer>
+				<LogoSection>
+					<img alt="Logo Synapse" src="../../Images/logo-synapse.svg" />
+				</LogoSection>
+				<SliceZone sliceZone={prismicFooterContent.body} />
+			</FooterContainer>
 		</>
 	);
 }
@@ -124,5 +134,73 @@ export const homeQuery = graphql`
 				}
 			}
 		}
+
+		prismicFooter {
+			data {
+				footer_logo {
+					url
+				}
+				body {
+					... on PrismicFooterBodySection {
+						id
+						slice_type
+						primary {
+							title_content
+						}
+						items {
+							text_content
+							link {
+								url
+							}
+						}
+					}
+					... on PrismicFooterBodySocial {
+						id
+						slice_type
+						primary {
+							title {
+								text
+							}
+							description {
+								text
+							}
+						}
+						items {
+							social_icon {
+								url
+								alt
+							}
+							social_link {
+								url
+							}
+						}
+					}
+
+					... on PrismicFooterBodyLegalMention {
+						id
+						slice_type
+						items {
+							link_content
+							link {
+								url
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`;
+
+const FooterContainer = styled.footer`
+	background-color: ${({ theme }) => theme.colors.primary};
+	margin-top: 100px;
+	padding: 20px;
+`;
+
+const LogoSection = styled.div`
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		display: inline-flex;
+		width: 25%;
 	}
 `;
