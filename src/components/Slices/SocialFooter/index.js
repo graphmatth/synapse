@@ -37,39 +37,48 @@ const SocialFooter = ({ slice }) => {
 	));
 
 	return (
-		<Container>
-			<div>
-				<Title>{slice.primary.title.text}</Title>
-				<div>{slice.primary.description.text}</div>
-			</div>
+		<>
+			<Divider />
+			<Container>
+				<div>
+					<Title>{slice.primary.title.text}</Title>
+					<div>{slice.primary.description.text}</div>
+				</div>
 
-			<Form method="post" name="email" onSubmit={handleSubmit}>
-				<Input
-					autoComplete="email"
-					id="email"
-					label="Email"
-					name="email"
-					placeholder="Email adress"
-					type="email"
-					onChange={handleChange}
-				/>
-				<Submit type="submit">
-					<img alt="arrow" src="../../Images/arrow.svg" />
-				</Submit>
-				<div
-					dangerouslySetInnerHTML={{
-						__html: statusForm,
-					}}
-					style={{ padding: 5 }}
-				/>
-			</Form>
+				<Form method="post" name="email" onSubmit={handleSubmit}>
+					<Input
+						autoComplete="email"
+						id="email"
+						label="Email"
+						name="email"
+						placeholder="Email adress"
+						type="email"
+						onChange={handleChange}
+					/>
+					<Submit type="submit">
+						<img alt="arrow" src="../../Images/arrow.svg" />
+					</Submit>
+					<div
+						dangerouslySetInnerHTML={{
+							__html: statusForm,
+						}}
+						style={{ padding: 5 }}
+					/>
+				</Form>
 
-			<SocialContainer>{socialItems}</SocialContainer>
-		</Container>
+				<SocialContainer>{socialItems}</SocialContainer>
+			</Container>
+			<Divider />
+		</>
 	);
 };
 
 export default SocialFooter;
+
+const Divider = styled.hr`
+	background-color: ${({ theme }) => theme.colors.white};
+	opacity: 0.1;
+`;
 
 const Submit = styled.button`
 	position: absolute;
@@ -121,10 +130,13 @@ const Container = styled.div`
 	font-family: 'Inter';
 	font-weight: 400;
 	margin-bottom: 20px;
+	padding: 30px 20px 0 20px;
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		flex-direction: row;
 		justify-content: space-between;
+		max-width: 1250px;
+		margin: 0 auto 20px auto;
 	}
 `;
 

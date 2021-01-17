@@ -9,14 +9,12 @@ const SectionFooter = ({ slice }) => {
 	));
 
 	return (
-		<div style={{ display: 'inline' }}>
-			<Container>
-				<li>
-					<Title>{slice.primary.title_content}</Title>
-					<ul>{sectionsItems}</ul>
-				</li>
-			</Container>
-		</div>
+		<Container>
+			<li>
+				<Title>{slice.primary.title_content}</Title>
+				<ul>{sectionsItems}</ul>
+			</li>
+		</Container>
 	);
 };
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
 import IntroHomepage from '../components/IntroHomepage';
+import FooterHomepage from '../components/FooterHomepage';
 import SliceZone from '../components/SliceZone';
 
 export default function Home({ data: { prismicHomepage, prismicNavigation, prismicFooter } }) {
@@ -20,12 +20,7 @@ export default function Home({ data: { prismicHomepage, prismicNavigation, prism
 			<Header dataNavigation={prismicNavigationContent} />
 			<IntroHomepage dataHomepage={prismicContent} />
 			<SliceZone sliceZone={prismicContent.body} />
-			<FooterContainer>
-				<LogoSection>
-					<img alt="Logo Synapse" src="../../Images/logo-synapse.svg" />
-				</LogoSection>
-				<SliceZone sliceZone={prismicFooterContent.body} />
-			</FooterContainer>
+			<FooterHomepage dataHomepage={prismicFooterContent} />
 		</>
 	);
 }
@@ -189,18 +184,5 @@ export const homeQuery = graphql`
 				}
 			}
 		}
-	}
-`;
-
-const FooterContainer = styled.footer`
-	background-color: ${({ theme }) => theme.colors.primary};
-	margin-top: 100px;
-	padding: 20px;
-`;
-
-const LogoSection = styled.div`
-	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		display: inline-flex;
-		width: 25%;
 	}
 `;
