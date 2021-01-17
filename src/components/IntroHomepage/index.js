@@ -10,7 +10,7 @@ const IntroHomepage = ({ dataHomepage }) => {
 					<Title>{dataHomepage.title.text}</Title>
 					<Description>{dataHomepage.description.text}</Description>
 
-					<Cta href="https://synapse-medicine.com/en/">
+					<Cta href="#contact_form">
 						{dataHomepage.cta[0].label.text}
 						<Arrow alt="arrow" src="../../Images/arrow-cta.svg" />
 					</Cta>

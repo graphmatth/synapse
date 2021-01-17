@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	background-color: ${({ theme }) => theme.colors.ternary};
+	padding-top: 60px;
+	padding-bottom: 60px;
 `;
 
 export const Wrapper = styled.div`

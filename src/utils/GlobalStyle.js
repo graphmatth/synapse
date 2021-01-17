@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 `;
 
 export default GlobalStyle;

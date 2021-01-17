@@ -7,7 +7,7 @@ const InfosProduct = ({ slice }) => {
 			<InfosSection>
 				<Title>{info.product_title.text}</Title>
 				<Description>{info.product_description.text}</Description>
-				<Cta>
+				<Cta href="#contact_form">
 					{info.cta1.text}
 					<Arrow alt="arrow" src="../../Images/arrow-cta.svg" />
 				</Cta>
