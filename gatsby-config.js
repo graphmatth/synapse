@@ -14,6 +14,12 @@ module.exports = {
 		'gatsby-plugin-eslint',
 		'gatsby-plugin-styled-components',
 		{
+			resolve: 'gatsby-plugin-mailchimp',
+			options: {
+				endpoint: process.env.MAILCHIMP_ENDPOINT,
+			},
+		},
+		{
 			resolve: `gatsby-source-prismic`,
 			options: {
 				repositoryName: `test-synapse`,
