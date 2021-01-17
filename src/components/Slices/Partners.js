@@ -17,6 +17,9 @@ const FlexContainer = styled.div`
 
 const MarqueeContainer = styled.div`
 	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 const Partners = ({ slice }) => {
 	const isDesktop = useMediaQuery({
