@@ -85,7 +85,7 @@ export const Button = styled.button`
 	height: 45px;
 	padding-left: 35px;
 	padding-right: 35px;
-	line-height: 35px;
+	line-height: 45px;
 	border-radius: 10px;
 	text-align: center;
 	display: block;

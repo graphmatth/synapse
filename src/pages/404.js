@@ -40,12 +40,12 @@ const Description = styled.p`
 	margin-bottom: 20px;
 `;
 
-export const Cta = styled.button`
+export const Cta = styled.a`
 	background-color: ${({ theme }) => theme.colors.secondary};
 	height: 45px;
 	padding-left: 35px;
 	padding-right: 35px;
-	line-height: 35px;
+	line-height: 45px;
 	border-radius: 10px;
 	text-align: center;
 	display: block;
