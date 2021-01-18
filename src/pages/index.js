@@ -1,11 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
+import SEO from '../components/SEO';
 import IntroHomepage from '../components/IntroHomepage';
 import FooterHomepage from '../components/FooterHomepage';
 import SliceZone from '../components/SliceZone';
 
-export default function Home({ data: { prismicHomepage, prismicNavigation, prismicFooter } }) {
+export default function Home({ data: { prismicHomepage, prismicNavigation, prismicFooter, prismicSeo } }) {
 	const prismicContent = prismicHomepage.data;
 	if (!prismicContent) return null;
 
@@ -13,10 +14,18 @@ export default function Home({ data: { prismicHomepage, prismicNavigation, prism
 	if (!prismicNavigationContent) return null;
 
 	const prismicFooterContent = prismicFooter.data;
-	if (!prismicFooter) return null;
+	if (!prismicFooterContent) return null;
+
+	const prismicSeoContent = prismicSeo.data;
+	if (!prismicSeoContent) return null;
 
 	return (
 		<>
+			<SEO
+				description={prismicSeoContent.meta_description}
+				siteLang={prismicSeoContent.html_lang}
+				title={prismicSeoContent.meta_title}
+			/>
 			<Header dataNavigation={prismicNavigationContent} />
 			<IntroHomepage dataHomepage={prismicContent} />
 			<SliceZone sliceZone={prismicContent.body} />
@@ -111,6 +120,14 @@ export const homeQuery = graphql`
 						slice_type
 					}
 				}
+			}
+		}
+
+		prismicSeo {
+			data {
+				meta_description
+				meta_title
+				html_lang
 			}
 		}
 
