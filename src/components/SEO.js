@@ -8,7 +8,7 @@ const SEO = ({ title, description, siteLang }) => {
 	const { pathname } = useLocation();
 	const { site } = useStaticQuery(query);
 
-	const { defaultTitle, defaultDescription, siteUrl, twitterUsername } = site.siteMetadata;
+	const { defaultTitle, defaultDescription, siteUrl, twitterUsername, author } = site.siteMetadata;
 
 	const seo = {
 		title: title || defaultTitle,
@@ -17,10 +17,43 @@ const SEO = ({ title, description, siteLang }) => {
 		siteLanguage: siteLang,
 	};
 
+	// schema.org in JSONLD format
+	// https://developers.google.com/search/docs/guides/intro-structured-data
+	// You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
+
+	const schemaOrgWebPage = {
+		'@context': 'http://schema.org',
+		'@type': 'WebPage',
+		url: siteUrl,
+		inLanguage: siteLang,
+		mainEntityOfPage: siteUrl,
+		description: defaultDescription,
+		name: defaultTitle,
+		author: {
+			'@type': 'Person',
+			name: author,
+		},
+		copyrightHolder: {
+			'@type': 'Person',
+			name: author,
+		},
+		copyrightYear: '2019',
+		creator: {
+			'@type': 'Person',
+			name: author,
+		},
+		publisher: {
+			'@type': 'Person',
+			name: author,
+		},
+		datePublished: '2021-01-18T10:30:00+01:00',
+	};
+
 	return (
 		<Helmet title={seo.title}>
 			<html lang={seo.siteLanguage} />
 			<meta content={seo.description} name="description" />
+			<script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>
 			{/* <meta name="image" content={seo.image} /> */}
 			{seo.url && <meta content={seo.url} property="og:url" />}
 			{seo.title && <meta content={seo.title} property="og:title" />}
