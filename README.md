@@ -27,7 +27,7 @@ yarn && yarn start
 
 path: `./src/schemas/*`
 
-### API key
+### .Env
 
 .env.production & .env.development
 
