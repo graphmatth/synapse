@@ -39,6 +39,12 @@ export const Hamburger = styled.a`
 	}
 `;
 
+export const NavLink = styled.a`
+	&:hover {
+		text-decoration: underline;
+	}
+`;
+
 export const Navigation = styled.nav`
 	position: fixed;
 	height: 100%;

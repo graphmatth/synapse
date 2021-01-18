@@ -15,6 +15,7 @@ export const Section = styled.section`
 export const FeatureImg = styled.img`
 	width: fit-content;
 	max-width: 100%;
+	margin-top: 15px;
 	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin-left: 45px;
 	}

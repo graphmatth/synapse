@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	max-width: 1250px;
-	padding: 20px;
+	padding: 40px 20px;
 	margin: 0 auto;
 	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		display: flex;
@@ -48,7 +48,7 @@ export const Section = styled.section`
 export const BoxShadow = styled.div`
 	width: 100%;
 	box-shadow: ${({ theme }) => theme.shadows.sm};
-	padding: 20px;
+	padding: 20px 20px 35px 20px;
 	border-radius: 15px;
 	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin-right: 45px;
