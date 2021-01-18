@@ -15,6 +15,7 @@ module.exports = {
 		description:
 			'Get a holistic overview of drug information in real time and ensure an appropriate use of medication for healthcare professionnals and the general public.',
 		url: 'http://test-synapse.netlify.app', // No trailing slash allowed!
+		siteUrl: 'http://test-synapse.netlify.app', // No trailing slash allowed!
 		twitterUsername: '@SynapseMed',
 		siteLanguage: 'en', //
 		shortName: 'Synapse', // shortname for manifest. MUST be shorter than 12 charactersLanguage Tag on <html> element
@@ -24,6 +25,15 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-eslint',
 		'gatsby-plugin-styled-components',
+		`gatsby-plugin-sitemap`,
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'http://test-synapse.netlify.app',
+				sitemap: 'https://www.example.com/sitemap.xml',
+				policy: [{ userAgent: '*', allow: '/' }],
+			},
+		},
 		{
 			resolve: 'gatsby-plugin-mailchimp',
 			options: {

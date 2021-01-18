@@ -37,7 +37,7 @@ const SEO = ({ title, description, siteLang }) => {
 			'@type': 'Person',
 			name: author,
 		},
-		copyrightYear: '2019',
+		copyrightYear: '2021',
 		creator: {
 			'@type': 'Person',
 			name: author,
