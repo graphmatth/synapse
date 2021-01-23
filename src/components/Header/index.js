@@ -8,6 +8,7 @@ import {
 	NavLink,
 	NavItemContainer,
 	HeaderWrapper,
+	Logo,
 } from './styles';
 
 const Header = ({ dataNavigation }) => {
@@ -22,7 +23,7 @@ const Header = ({ dataNavigation }) => {
 	return (
 		<HeaderContainer>
 			<HeaderWrapper>
-				<img alt="logo" src={dataNavigation.logo.url} />
+				<Logo alt="logo" src={dataNavigation.logo.url} />
 				<Hamburger
 					isOpen={isOpen}
 					role="button"

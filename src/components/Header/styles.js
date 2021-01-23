@@ -10,6 +10,10 @@ export const HeaderContainer = styled.header`
 	z-index: 20;
 `;
 
+export const Logo = styled.img`
+	max-width: 180px;
+`;
+
 export const Hamburger = styled.a`
 	height: 20px;
 	width: 20px;

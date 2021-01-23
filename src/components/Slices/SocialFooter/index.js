@@ -148,4 +148,10 @@ const SocialContainer = styled.div`
 
 const SocialLink = styled.a`
 	margin-right: 10px;
+	height: 41px;
+	width: 41px;
+
+	img {
+		width: 100%;
+	}
 `;

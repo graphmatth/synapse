@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 const Logo = styled.img`
 	align-self: center;
 	padding: 15px;
+	max-height: 80px;
 `;
 
 const FlexContainer = styled.div`
